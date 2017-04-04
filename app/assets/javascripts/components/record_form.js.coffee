@@ -17,7 +17,6 @@
       @props.handleNewRecord data
       @setState @getInitialState()
     , 'JSON'
-    location.reload()
 
   render: ->
     React.DOM.form

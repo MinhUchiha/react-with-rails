@@ -14,8 +14,8 @@
       url: "/records/#{ @props.record.id }"
       dataType: 'JSON'
       success: () =>
+        console.log @props.handleDeleteRecord
         @props.handleDeleteRecord @props.record
-        location.reload()
 
   handleEdit: (e) ->
     e.preventDefault()
@@ -33,7 +33,6 @@
       success: (data) =>
         @setState edit: false
         @props.handleEditRecord @props.record, data
-        location.reload()
 
   recordRow: ->
     React.DOM.tr null,
